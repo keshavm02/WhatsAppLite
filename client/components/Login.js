@@ -1,11 +1,30 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
+import { TextInput } from "react-native-gesture-handler";
 
 export default class Login extends React.Component {
+    
+    constructor(){
+        super();
+        this.state = {
+            displayName: ""
+        }
+    }
+    
+    enterChatroom() {
+        if (this.state.displayName == "") {
+            alert("Please enter a display name");
+        } else {
+            this.props.navigation.navigate("Conversation", {displayName: this.state.displayName})
+        }
+    }
+
     render() {
         return(
             <View>
                 <Text> Welcome to WhatsAppLite </Text>
+                <TextInput onChangeText={(Text => this.setState({displayName: Text}))} placeholder="Enter your display name"/>
+                <Button title="Enter" onPress={() => this.enterChatroom()}/>
             </View>
         )
     }
