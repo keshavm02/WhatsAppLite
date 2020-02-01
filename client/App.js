@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 //import components
 import Login from "./components/Login";
+import Conversation from "./components/Conversation"
 
 const AppNavigator = createStackNavigator({
     Login: {

@@ -1,16 +1,15 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
+import {View, Text, TextInput, Button} from "react-native";
 
 export default class Login extends React.Component {
-    
+
     constructor(){
         super();
         this.state = {
             displayName: ""
         }
     }
-    
+
     enterChatroom() {
         if (this.state.displayName == "") {
             alert("Please enter a display name");
@@ -23,10 +22,9 @@ export default class Login extends React.Component {
         return(
             <View>
                 <Text> Welcome to WhatsAppLite </Text>
-                <TextInput onChangeText={(Text => this.setState({displayName: Text}))} placeholder="Enter your display name"/>
+                <TextInput onChangeText={(text) => this.setState({displayName: text})} placeholder="Enter your display name"/>
                 <Button title="Enter" onPress={() => this.enterChatroom()}/>
             </View>
         )
     }
-
 }
