@@ -10,6 +10,9 @@ import Conversation from "./components/Conversation"
 const AppNavigator = createStackNavigator({
     Login: {
         screen: Login
+    },
+    Conversation: {
+      screen: Conversation
     }
 })
 

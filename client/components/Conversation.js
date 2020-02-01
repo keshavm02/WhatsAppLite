@@ -2,6 +2,7 @@ import React from "react";
 import { GiftedChat } from "react-native-gifted-chat";
 import Socket from "../socket";
 
+
 export default class Conversation extends React.Component {
 
     constructor() {
@@ -9,10 +10,10 @@ export default class Conversation extends React.Component {
         this.socket = new Socket();
     }
 
-    sendMessage(){
+
+    sendMessage(message) {
         alert(message);
     }
-
 
     render() {
         return (
